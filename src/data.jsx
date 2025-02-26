@@ -1,5 +1,7 @@
 import { nanoid } from 'nanoid'
 import { FaHtml5, FaJs, FaReact } from 'react-icons/fa'
+import companyALogo from './assets/tcs.png'
+import companyBLogo from './assets/medibliss.png'
 
 export const links = [
   { id: nanoid(), href: '#home', text: 'home' },
@@ -53,5 +55,33 @@ export const projects = [
     github: 'https://github.com/john-smilga',
     title: 'third project',
     text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.'
+  }
+]
+
+export const experiences = [
+  {
+    id: 1,
+    title: 'Software Engineer Intern',
+    company: 'Company A',
+    logo: companyALogo,
+    description: 'Worked on frontend development using React and Tailwind CSS.',
+    date: 'Jan 2023 - June 2023'
+  },
+  {
+    id: 2,
+    title: 'Machine Learning Engineer',
+    company: 'Company B',
+     logo: companyBLogo,
+    description: 'Developed AI models for image classification using PyTorch.',
+    date: 'July 2023 - Dec 2023'
+  },
+  {
+    id: 3,
+    title: 'Full Stack Developer',
+    company: 'Company C',
+    logo: companyBLogo,
+    description:
+      'Built and deployed full-stack applications using Flask and React.',
+    date: 'Jan 2024 - Present'
   }
 ]
