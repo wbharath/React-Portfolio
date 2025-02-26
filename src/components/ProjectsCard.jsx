@@ -1,8 +1,9 @@
-import { FaGithubSquare, FaLinkedin} from "react-icons/fa"
-import { TbWorldWww } from "react-icons/tb"
+import React from 'react';
+import { FaGithubSquare } from 'react-icons/fa';
+import { TbWorldWww } from 'react-icons/tb';
 
-
-const ProjectsCard = ({url, img, github, title, text}) => {
+const ProjectsCard = ({ url, img, github, title, text }) => {
+  console.log(github)
   return (
     <article className="bg-white rounded-lg shadow-md hover:shadow-xl duration-300">
       <img
@@ -23,7 +24,7 @@ const ProjectsCard = ({url, img, github, title, text}) => {
         </div>
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default ProjectsCard
+export default ProjectsCard;

@@ -1,11 +1,9 @@
-
 import React, { useState } from 'react'
 import { experiences } from '../data'
 import SectionTitle from './SectionTitle'
 
 const TimelineItem = ({ experience, index, openId, setOpenId }) => {
   const isOpen = openId === experience.id
-
   const handleClick = () => {
     setOpenId(isOpen ? null : experience.id)
   }
@@ -15,10 +13,7 @@ const TimelineItem = ({ experience, index, openId, setOpenId }) => {
 
   return (
     <div className="relative w-full pb-10 pt-10">
-      {/* 
-        Vertical line in the center, 
-        only visible on md+ screens 
-      */}
+      {/* Hide the line on small screens if you wish */}
       <div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 h-full border-l-2 border-gray-300" />
 
       {/* Logo container */}
@@ -38,21 +33,18 @@ const TimelineItem = ({ experience, index, openId, setOpenId }) => {
       {isOpen && (
         <div
           className={`
-            /* On md+ screens, absolutely position the card */
-            md:absolute md:top-1/2 md:-translate-y-1/2 md:w-72 
-            ${isEven ? 'md:left-[55%]' : 'md:right-[55%]'} 
-            
-            /* On smaller screens, just stack the card below the logo */
-            sm:relative sm:mt-4 sm:mx-auto sm:w-full sm:p-6
-
-            /* Common classes for all screens */
-            p-4 bg-white shadow-md rounded-md
+            md:absolute md:top-1/2 md:-translate-y-1/2 md:max-w-sm
+            ${isEven ? 'md:left-[60%]' : 'md:right-[60%]'} 
+            sm:relative sm:mt-4 sm:mx-auto sm:w-full
+            p-6 bg-white shadow-md rounded-md
           `}
         >
           <h3 className="text-xl font-bold">{experience.title}</h3>
           <h4 className="text-md text-gray-600">{experience.company}</h4>
           <span className="text-sm text-gray-500">{experience.date}</span>
-          <p className="mt-2 text-gray-700">{experience.description}</p>
+          <p className="mt-2 text-gray-700">
+            {experience.description}
+          </p>
         </div>
       )}
     </div>
@@ -60,17 +52,18 @@ const TimelineItem = ({ experience, index, openId, setOpenId }) => {
 }
 
 const VerticalTimeline = () => {
-  const [openId, setOpenId] = useState(null)
+  // Initialize with the first experience open by default.
+  const [openId, setOpenId] = useState(experiences[0]?.id || null)
 
   return (
-   
-    <div className="mx-auto w-full sm:max-w-3xl p-4">
-      <div className="text-center">
+    <div className="mx-auto w-full sm:max-w-3xl px-4">
+      {/* Centered Section title */}
+      <div className="text-center mt-8">
         <SectionTitle text="Experience Timeline" />
       </div>
 
-      {/* Margin-top to push the timeline below the title */}
-      <div className="mt-8">
+      {/* Extra margin so the first item/card doesn’t overlap the title */}
+      <div className="mt-16">
         {experiences.map((exp, index) => (
           <TimelineItem
             key={exp.id}
