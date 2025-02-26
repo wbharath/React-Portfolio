@@ -3,7 +3,7 @@ import ExperienceTimeline from "./components/ExperienceTimeline"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Projects from "./components/Projects"
-import SKills from "./components/SKills"
+import SKills from "./components/Skills"
 
 
 function App() {
