@@ -11,6 +11,7 @@ function App() {
     <>
     <Navbar/>
     <Hero/>
+    <div className="hidden animate-wave"></div>
     <SKills/>
     <About/>
     <Projects/>

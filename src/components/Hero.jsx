@@ -1,5 +1,4 @@
-import heroImg from '../assets/hero.svg'
-
+import bharad from '../assets/bharad.png'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
@@ -18,15 +17,15 @@ const Hero = () => {
           </p>
           <div className="flex gap-x-4 mt-4">
             <a href="#">
-              <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300"></FaGithubSquare>
+              <FaGithubSquare className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
             </a>
             <a href="#">
-              <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300"></FaLinkedin>
+              <FaLinkedin className="h-8 w-8 text-slate-500 hover:text-black duration-300" />
             </a>
           </div>
         </article>
-        <article className="hidden md:block">
-          <img src={heroImg} className="h-80 lg:h-96" />
+        <article className="hidden md:flex justify-center">
+          <img src={bharad} className="h-80 lg:h-96" alt="Bharadwaj" />
         </article>
       </div>
     </div>
