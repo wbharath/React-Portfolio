@@ -9,18 +9,18 @@ const Projects = () => {
 
   if (loading) {
     return (
-      <section className="py-20 align-element" id="projects">
+      <section className="py-10 align-element" id="projects">
         <SectionTitle text="web-creations and apps" />
 
-        <div className="py-16 text-center">Loading...</div>
+        <div className="py-8 text-center">Loading...</div>
       </section>
     )
   }
 
   return (
-    <section className="py-20 align-element" id="projects">
+    <section className="py-10 align-element" id="projects">
       <SectionTitle text="web-creations" />
-      <div className="py-16 grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+      <div className="py-8 grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {projects.map((project) => (
           <ProjectsCard key={project.id} {...project} />
         ))}
