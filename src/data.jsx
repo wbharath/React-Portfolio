@@ -119,33 +119,6 @@ export const links = [
   { id: nanoid(), href: '#experience', text: 'experience' }
 ]
 
-export const projects = [
-  {
-    id: nanoid(),
-    img: 'https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://react-projects.netlify.app/',
-    github: 'https://github.com/john-smilga',
-    title: 'first project',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.'
-  },
-  {
-    id: nanoid(),
-    img: 'https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://react-projects.netlify.app/',
-    github: 'https://github.com/john-smilga',
-    title: 'second project',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.'
-  },
-  {
-    id: nanoid(),
-    img: 'https://images.pexels.com/photos/12883026/pexels-photo-12883026.jpeg?auto=compress&cs=tinysrgb&w=800',
-    url: 'https://react-projects.netlify.app/',
-    github: 'https://github.com/john-smilga',
-    title: 'third project',
-    text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores aperiam porro impedit tenetur quo hic omnis doloribus dolores enim deleniti.'
-  }
-]
-
 export const experiences = [
   {
     id: 1,
@@ -195,81 +168,97 @@ export const experienceSkills = [
   {
     id: nanoid(),
     company: ['Medibliss Transactions', 'Tata Consultancy Services'],
-    icon: <FaReact className="h-16 w-16 text-emerald-500" />
+    icon: <FaReact className="h-16 w-16 text-emerald-500" />,
+    text: 'React.js'
   },
   {
     id: nanoid(),
     company: ['Tata Consultancy Services'],
-    icon: <SiNextdotjs className="h-16 w-16 text-emerald-500" />
+    icon: <SiNextdotjs className="h-16 w-16 text-emerald-500" />,
+    text: 'Next.js'
   },
   {
     id: nanoid(),
     company: ['NA'],
-    icon: <SiSupabase className="h-16 w-16 text-emerald-500" />
+    icon: <SiSupabase className="h-16 w-16 text-emerald-500" />,
+    text: 'Supabase'
   },
   {
     id: nanoid(),
     company: ['Medibliss Transactions', 'Tata Consultancy Services'],
-    icon: <FaHtml5 className="h-16 w-16 text-emerald-500" />
+    icon: <FaHtml5 className="h-16 w-16 text-emerald-500" />,
+    text: 'HTML5'
   },
   {
     id: nanoid(),
     company: ['Medibliss Transactions', 'Tata Consultancy Services'],
-    icon: <SiTailwindcss className="h-16 w-16 text-emerald-500" />
+    icon: <SiTailwindcss className="h-16 w-16 text-emerald-500" />,
+    text: 'Tailwind CSS'
   },
   {
     id: nanoid(),
     company: ['Tata Consultancy Services'],
-    icon: <FaNodeJs className="h-16 w-16 text-emerald-500" />
+    icon: <FaNodeJs className="h-16 w-16 text-emerald-500" />,
+    text: 'Node.js'
   },
   {
     id: nanoid(),
     company: ['Medibliss Transactions', 'Tata Consultancy Services'],
-    icon: <FaJs className="h-16 w-16 text-emerald-500" />
+    icon: <FaJs className="h-16 w-16 text-emerald-500" />,
+    text: 'JavaScript'
   },
   {
     id: nanoid(),
     company: ['Tata Consultancy Services'],
-    icon: <FaPython className="h-16 w-16 text-emerald-500" />
+    icon: <FaPython className="h-16 w-16 text-emerald-500" />,
+    text: 'Python'
   },
   {
     id: nanoid(),
     company: ['NA'],
-    icon: <SiTypescript className="h-16 w-16 text-emerald-500" />
+    icon: <SiTypescript className="h-16 w-16 text-emerald-500" />,
+    text: 'TypeScript'
   },
   {
     id: nanoid(),
     company: ['NA'],
-    icon: <FaAws className="h-16 w-16 text-emerald-500" />
+    icon: <FaAws className="h-16 w-16 text-emerald-500" />,
+    text: 'AWS'
   },
   {
     id: nanoid(),
     company: ['Medibliss Transactions'],
-    icon: <FaAndroid className="h-16 w-16 text-emerald-500" /> // Proxy icon
+    icon: <FaAndroid className="h-16 w-16 text-emerald-500" />,
+    text: 'Android'
   },
   {
     id: nanoid(),
     company: ['Medibliss Transactions', 'Tata Consultancy Services'],
-    icon: <FaJava className="h-16 w-16 text-emerald-500" />
+    icon: <FaJava className="h-16 w-16 text-emerald-500" />,
+    text: 'Java'
   },
   {
     id: nanoid(),
     company: ['Tata Consultancy Services'],
-    icon: <DiRedis className="h-16 w-16 text-emerald-500" />
+    icon: <DiRedis className="h-16 w-16 text-emerald-500" />,
+    text: 'Redis'
   },
   {
     id: nanoid(),
     company: ['Tata Consultancy Services'],
-    icon: <SiJenkins className="h-16 w-16 text-emerald-500" />
+    icon: <SiJenkins className="h-16 w-16 text-emerald-500" />,
+    text: 'Jenkins'
   },
   {
     id: nanoid(),
     company: ['Medibliss Transactions', 'Tata Consultancy Services'],
-    icon: <SiMysql className="h-16 w-16 text-emerald-500" />
+    icon: <SiMysql className="h-16 w-16 text-emerald-500" />,
+    text: 'MySQL'
   },
   {
     id: nanoid(),
     company: ['Medibliss Transactions', 'Tata Consultancy Services'],
-    icon: <SiMongodb className="h-16 w-16 text-emerald-500" />
+    icon: <SiMongodb className="h-16 w-16 text-emerald-500" />,
+    text: 'MongoDB'
   }
 ]

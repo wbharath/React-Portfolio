@@ -1,29 +1,40 @@
 import React from 'react'
-import { useFetchProjects } from '../assets/fetchProjects' // adjust the path as needed
+import { useFetchProjects } from '../assets/fetchProjects'
 import ProjectsCard from './ProjectsCard'
 import SectionTitle from './SectionTitle'
 
 const Projects = () => {
-  const { loading, projects } = useFetchProjects()
-  // console.log(projects)
+  const { projects, loading, error } = useFetchProjects()
 
   if (loading) {
     return (
-      <section className="py-10 align-element" id="projects">
-        <SectionTitle text="web-creations and apps" />
+      <section className="py-24 bg-slate-50" id="projects">
+        <div className="align-element mx-auto max-w-7xl px-8">
+          <div className="text-center text-slate-600">Loading projects...</div>
+        </div>
+      </section>
+    )
+  }
 
-        <div className="py-8 text-center">Loading...</div>
+  if (error) {
+    return (
+      <section className="py-24 bg-slate-50" id="projects">
+        <div className="align-element mx-auto max-w-7xl px-8">
+          <div className="text-center text-red-600">Error loading projects</div>
+        </div>
       </section>
     )
   }
 
   return (
-    <section className="py-10 align-element" id="projects">
-      <SectionTitle text="web-creations" />
-      <div className="py-8 grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <ProjectsCard key={project.id} {...project} />
-        ))}
+    <section className="py-24 bg-slate-50" id="projects">
+      <div className="align-element mx-auto max-w-7xl px-8">
+        <SectionTitle text="Featured Projects" />
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {projects.map((project) => (
+            <ProjectsCard key={project.id} {...project} />
+          ))}
+        </div>
       </div>
     </section>
   )
