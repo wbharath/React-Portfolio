@@ -42,14 +42,14 @@ const Hero = () => {
           </div>
           <div className="flex gap-x-4 pt-4">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/wbharath"
               className="group"
               aria-label="GitHub"
             >
               <FaGithubSquare className="h-8 w-8 text-slate-400 group-hover:text-slate-700 transition-all duration-300 group-hover:scale-110" />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/durgasaib"
               className="group"
               aria-label="LinkedIn"
             >
