@@ -5,11 +5,11 @@ import { TbWorldWww } from 'react-icons/tb'
 const ProjectsCard = ({ url, img, github, title, text }) => {
   return (
     <article className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-100 hover:border-emerald-200">
-      <div className="relative overflow-hidden h-64">
+      <div className="relative overflow-hidden bg-slate-50 h-56">
         <img
           src={img}
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </div>

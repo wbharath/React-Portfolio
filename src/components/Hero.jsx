@@ -1,4 +1,3 @@
-import bharad from '../assets/bharad.png'
 import { FaGithubSquare, FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
@@ -26,7 +25,7 @@ const Hero = () => {
           <p className="text-lg text-slate-500 leading-relaxed">
             Turning ideas into reality with clean code and modern design
           </p>
-          <div className="flex gap-4 pt-4">
+          <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#projects"
               className="px-8 py-3 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-all duration-300 hover:shadow-lg hover:scale-105"
@@ -38,6 +37,13 @@ const Hero = () => {
               className="px-8 py-3 border-2 border-slate-300 text-slate-700 rounded-lg font-medium hover:border-emerald-600 hover:text-emerald-600 transition-all duration-300"
             >
               Contact Me
+            </a>
+            <a
+              href="/Bharadwaj_Resume.pdf"
+              download
+              className="px-8 py-3 border-2 border-emerald-600 text-emerald-600 rounded-lg font-medium hover:bg-emerald-600 hover:text-white transition-all duration-300"
+            >
+              Resume
             </a>
           </div>
           <div className="flex gap-x-4 pt-4">
@@ -67,4 +73,5 @@ const Hero = () => {
     </div>
   )
 }
+
 export default Hero
