@@ -14,9 +14,9 @@ function App() {
       <About />
       <Projects />
       <Experiences />
-      <footer className="bg-slate-900 text-white py-12 text-center">
-        <p className="text-slate-400">
-          © 2025 Bharadwaj Racharla. All rights reserved.
+      <footer className="bg-slate-950 border-t border-white/5 py-10 text-center">
+        <p className="text-slate-500 text-sm">
+          © 2025 Bharadwaj Racharla. Built with React & Tailwind.
         </p>
       </footer>
     </div>

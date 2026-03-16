@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { skills } from '../data'
 import SectionTitle from './SectionTitle'
 import SkillsCard from './SkillsCard'
@@ -8,8 +8,10 @@ const Skills = () => {
 
   const handleScroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -400 : 400
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -400 : 400,
+        behavior: 'smooth',
+      })
     }
   }
 
@@ -20,17 +22,17 @@ const Skills = () => {
         <div className="relative">
           <button
             onClick={() => handleScroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-white border-2 border-slate-200 rounded-full shadow-lg hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300 flex items-center justify-center text-2xl text-slate-700"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full shadow-sm hover:border-indigo-300 hover:text-indigo-600 transition-all duration-200 flex items-center justify-center text-slate-500 text-xl"
           >
             ‹
           </button>
 
           <div
             ref={scrollRef}
-            className="overflow-x-hidden flex gap-6 scroll-smooth pb-4"
+            className="overflow-x-hidden flex gap-5 scroll-smooth pb-2"
           >
             {skills.map((skill) => (
-              <div key={skill.id} className="flex-shrink-0 w-[320px]">
+              <div key={skill.id} className="flex-shrink-0 w-[300px]">
                 <SkillsCard {...skill} />
               </div>
             ))}
@@ -38,7 +40,7 @@ const Skills = () => {
 
           <button
             onClick={() => handleScroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-white border-2 border-slate-200 rounded-full shadow-lg hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300 flex items-center justify-center text-2xl text-slate-700"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-10 w-10 h-10 bg-white border border-slate-200 rounded-full shadow-sm hover:border-indigo-300 hover:text-indigo-600 transition-all duration-200 flex items-center justify-center text-slate-500 text-xl"
           >
             ›
           </button>
@@ -47,4 +49,5 @@ const Skills = () => {
     </section>
   )
 }
+
 export default Skills

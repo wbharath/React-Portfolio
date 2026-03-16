@@ -1,10 +1,19 @@
-import React from 'react'
+import { useState, useRef } from 'react'
 import { useFetchProjects } from '../assets/fetchProjects'
 import ProjectsCard from './ProjectsCard'
+import ProjectModal from './ProjectModal'
 import SectionTitle from './SectionTitle'
 
 const Projects = () => {
   const { projects, loading, error } = useFetchProjects()
+  const [selectedProject, setSelectedProject] = useState(null)
+  const closingRef = useRef(false)
+
+  const handleClose = () => {
+    closingRef.current = true
+    setSelectedProject(null)
+    setTimeout(() => { closingRef.current = false }, 400)
+  }
 
   if (loading) {
     return (
@@ -32,10 +41,21 @@ const Projects = () => {
         <SectionTitle text="Featured Projects" />
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <ProjectsCard key={project.id} {...project} />
+            <ProjectsCard
+              key={project.id}
+              {...project}
+              onImageHover={() => { if (!closingRef.current) setSelectedProject(project) }}
+            />
           ))}
         </div>
       </div>
+
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={handleClose}
+        />
+      )}
     </section>
   )
 }
