@@ -166,7 +166,7 @@ export const experiences = [
     id: 4,
     title: 'Full Stack Developer',
     company: 'CITI Bank',
-    log0: companyCLogo,
+    logo: companyCLogo,
     description: [
       'Managed the development of scalable, high-performance web applications using React.js, Node.js (Express.js), and Spring Boot, increasing customer engagement and satisfaction',
       'Created and optimized RESTful APIs and microservices in a cloud-native environment, utilizing AWS services (EC2, Lambda, S3) for high availability and scalability',
@@ -184,7 +184,7 @@ export const experiences = [
 export const experienceSkills = [
   {
     id: nanoid(),
-    company: ['Medibliss Transactions', 'Tata Consultancy Services'],
+    company: ['Medibliss Transactions', 'Tata Consultancy Services', 'CITI Bank'],
     icon: <FaReact className="h-16 w-16 text-indigo-500" />,
     text: 'React.js'
   },
@@ -214,7 +214,7 @@ export const experienceSkills = [
   },
   {
     id: nanoid(),
-    company: ['Tata Consultancy Services'],
+    company: ['Tata Consultancy Services', 'CITI Bank'],
     icon: <FaNodeJs className="h-16 w-16 text-indigo-500" />,
     text: 'Node.js'
   },
@@ -232,13 +232,13 @@ export const experienceSkills = [
   },
   {
     id: nanoid(),
-    company: ['NA'],
+    company: ['CITI Bank'],
     icon: <SiTypescript className="h-16 w-16 text-indigo-500" />,
     text: 'TypeScript'
   },
   {
     id: nanoid(),
-    company: ['NA'],
+    company: ['Medibliss Transactions', 'Tata Consultancy Services', 'CITI Bank'],
     icon: <FaAws className="h-16 w-16 text-indigo-500" />,
     text: 'AWS'
   },
@@ -262,7 +262,7 @@ export const experienceSkills = [
   },
   {
     id: nanoid(),
-    company: ['Tata Consultancy Services'],
+    company: ['Tata Consultancy Services', 'CITI Bank'],
     icon: <SiJenkins className="h-16 w-16 text-indigo-500" />,
     text: 'Jenkins'
   },
@@ -274,7 +274,7 @@ export const experienceSkills = [
   },
   {
     id: nanoid(),
-    company: ['Medibliss Transactions', 'Tata Consultancy Services'],
+    company: ['Medibliss Transactions', 'Tata Consultancy Services', 'CITI Bank'],
     icon: <SiMongodb className="h-16 w-16 text-indigo-500" />,
     text: 'MongoDB'
   }
