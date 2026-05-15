@@ -11,7 +11,7 @@ import { SiMongodb } from 'react-icons/si'
 import { FaAndroid } from 'react-icons/fa'
 import companyBLogo from './assets/medibliss.png'
 import companyALogo from './assets/tcs.png'
-
+import companyCLogo from './assets/citi.svg'
 export const skills = [
   {
     id: nanoid(),
@@ -161,6 +161,23 @@ export const experiences = [
       'Streamlined deployment pipelines automating CI/CD processes with Jenkins reducing deployment times significantly'
     ],
     date: 'Mar 2022 - Sep 2023'
+  },
+  {
+    id: 4,
+    title: 'Full Stack Developer',
+    company: 'CITI Bank',
+    log0: companyCLogo,
+    description: [
+      'Managed the development of scalable, high-performance web applications using React.js, Node.js (Express.js), and Spring Boot, increasing customer engagement and satisfaction',
+      'Created and optimized RESTful APIs and microservices in a cloud-native environment, utilizing AWS services (EC2, Lambda, S3) for high availability and scalability',
+      'Enhanced data management and performance with PostgreSQL and MongoDB, improving query response times through indexing and schema optimization',
+      'Integrated machine learning models into production workflows using AWS SageMaker, automating data analysis and increasing system efficiency',
+      'Improved CI/CD pipeline with Jenkins and Docker, reducing deployment times and streamlining testing and deployment',
+      'Collaborated in Agile/Scrum teams, contributing to sprint planning, daily stand-ups, and code reviews, improving team velocity and code quality',
+      'Used Swagger/OpenAPI to document and standardize API interfaces, ensuring seamless communication between front-end and back-end teams',
+      'Performed unit and integration testing with Jest and JUnit, ensuring robust application stability and comprehensive test coverage'
+    ],
+    date: 'July 2024 - Present'
   }
 ]
 
