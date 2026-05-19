@@ -4,8 +4,10 @@ import ProjectsCard from './ProjectsCard'
 import { FaGithubSquare } from 'react-icons/fa'
 import { TbWorldWww } from 'react-icons/tb'
 
+const FEATURED_TITLES = ['trackr', 'fifa wc 2026']
+
 const FeaturedCard = ({ title, img, description, techStack, url, github }) => (
-  <article className="lg:col-span-2 bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-indigo-200 hover:shadow-xl transition-all duration-300 group">
+  <article className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-indigo-200 hover:shadow-xl transition-all duration-300 group">
     <div className="grid md:grid-cols-2 min-h-[400px]">
       <div className="relative overflow-hidden bg-slate-100 min-h-[220px]">
         <img
@@ -76,14 +78,26 @@ const Projects = () => {
     )
   }
 
-  const [featured, ...rest] = projects
+  const featured = projects.filter((p) =>
+    FEATURED_TITLES.some((t) => p.title?.toLowerCase().includes(t))
+  )
+  console.log('featured:', featured.map((p) => p.title))
+  const rest = projects.filter(
+    (p) => !FEATURED_TITLES.some((t) => p.title?.toLowerCase().includes(t))
+  )
 
   return (
     <section className="py-24 bg-slate-50" id="projects">
       <div className="align-element mx-auto max-w-7xl px-8">
         <SectionTitle text="Featured Projects" />
+        {featured.length > 0 && (
+          <div className="grid grid-cols-1 gap-6 mb-6">
+            {featured.map((project) => (
+              <FeaturedCard key={project.id} {...project} />
+            ))}
+          </div>
+        )}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {featured && <FeaturedCard {...featured} />}
           {rest.map((project) => (
             <ProjectsCard key={project.id} {...project} />
           ))}
