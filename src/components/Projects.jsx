@@ -4,7 +4,7 @@ import ProjectsCard from './ProjectsCard'
 import { FaGithubSquare } from 'react-icons/fa'
 import { TbWorldWww } from 'react-icons/tb'
 
-const FEATURED_TITLES = ['trackr', 'fifa wc 2026']
+const FEATURED_TITLES = ['trackr', 'KickBase - Your Fantasy Football App']
 
 const FeaturedCard = ({ title, img, description, techStack, url, github }) => (
   <article className="bg-white rounded-2xl border border-slate-200 overflow-hidden hover:border-indigo-200 hover:shadow-xl transition-all duration-300 group">
